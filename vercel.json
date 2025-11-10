@@ -1,9 +1,18 @@
 {
+  "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": "out",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_SITE_URL": "https://yourdomain.com"
+    }
+  }
 }
 
 
