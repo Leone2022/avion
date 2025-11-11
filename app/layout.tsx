@@ -3,6 +3,7 @@ import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import CartButton from '@/components/CartButton';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
   title: 'Avion School Supplies Ltd - Smart Shopping for Smart Minds',
@@ -26,6 +27,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CartButton />
+        <WhatsAppButton />
       </body>
     </html>
   );
