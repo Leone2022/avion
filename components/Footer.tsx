@@ -26,7 +26,11 @@ export default function Footer() {
           <div className="col-span-1">
             <Link href="/" className="flex items-center space-x-3 mb-4">
               <div className="flex items-center justify-center w-12 h-12 bg-white/10 rounded-lg">
-                <span className="text-2xl">🛒</span>
+                <img 
+                  src="/logo.png" 
+                  alt="Avion School Supplies Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <div className="text-xl font-bold">Avion</div>
@@ -137,5 +141,6 @@ export default function Footer() {
     </footer>
   );
 }
+
 
 

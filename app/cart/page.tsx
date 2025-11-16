@@ -8,6 +8,7 @@ import { Product } from '@/lib/products';
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isUpdating, setIsUpdating] = useState(false);
+  const [isGenerating, setIsGenerating] = useState(false);
 
   useEffect(() => {
     loadCart();
@@ -61,6 +62,141 @@ export default function CartPage() {
   };
 
   const total = getCartTotal();
+
+  const handleDownloadPdf = async () => {
+    if (cartItems.length === 0) return;
+    setIsGenerating(true);
+    try {
+      const { jsPDF } = await import('jspdf');
+      const doc = new jsPDF({ unit: 'pt' });
+
+      const title = 'Invoice - Avion School Supplies';
+      doc.setFontSize(18);
+      doc.text(title, 40, 40);
+
+      const date = new Date();
+      doc.setFontSize(10);
+      doc.text(`Date: ${date.toLocaleString()}`, 40, 60);
+
+      // Table header
+      let y = 100;
+      doc.setFontSize(12);
+      doc.text('Qty', 40, y);
+      doc.text('Item', 90, y);
+      doc.text('Unit Price', 360, y);
+      doc.text('Subtotal', 460, y);
+      y += 16;
+
+      doc.setFontSize(11);
+      cartItems.forEach((item, idx) => {
+        const name = item.product.name;
+        const qty = String(item.quantity);
+        const unit = formatPrice(item.product.price);
+        const subtotal = formatPrice(item.product.price * item.quantity);
+
+        doc.text(qty, 40, y);
+        doc.text(name, 90, y);
+        doc.text(unit, 360, y);
+        doc.text(subtotal, 460, y);
+        y += 18;
+        // add new page if needed
+        if (y > 720) {
+          doc.addPage();
+          y = 40;
+        }
+      });
+
+      // Total
+      if (y + 40 > 800) doc.addPage();
+      doc.setFontSize(12);
+      doc.text('Total:', 360, y + 30);
+      doc.text(formatPrice(total), 460, y + 30);
+
+      doc.save(`avion-invoice-${date.getFullYear()}${date.getMonth()+1}${date.getDate()}.pdf`);
+    } catch (err) {
+      console.error('Error generating PDF', err);
+      alert('Could not generate PDF invoice.');
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const handleSendWhatsApp = async () => {
+    if (cartItems.length === 0) return;
+    setIsGenerating(true);
+    try {
+      // First generate PDF
+      const { jsPDF } = await import('jspdf');
+      const doc = new jsPDF({ unit: 'pt' });
+
+      const title = 'Invoice - Avion School Supplies';
+      doc.setFontSize(18);
+      doc.text(title, 40, 40);
+
+      const date = new Date();
+      doc.setFontSize(10);
+      doc.text(`Date: ${date.toLocaleString()}`, 40, 60);
+
+      // Table header
+      let y = 100;
+      doc.setFontSize(12);
+      doc.text('Qty', 40, y);
+      doc.text('Item', 90, y);
+      doc.text('Unit Price', 360, y);
+      doc.text('Subtotal', 460, y);
+      y += 16;
+
+      doc.setFontSize(11);
+      cartItems.forEach((item, idx) => {
+        const name = item.product.name;
+        const qty = String(item.quantity);
+        const unit = formatPrice(item.product.price);
+        const subtotal = formatPrice(item.product.price * item.quantity);
+
+        doc.text(qty, 40, y);
+        doc.text(name, 90, y);
+        doc.text(unit, 360, y);
+        doc.text(subtotal, 460, y);
+        y += 18;
+        if (y > 720) {
+          doc.addPage();
+          y = 40;
+        }
+      });
+
+      // Total
+      if (y + 40 > 800) doc.addPage();
+      doc.setFontSize(12);
+      doc.text('Total:', 360, y + 30);
+      doc.text(formatPrice(total), 460, y + 30);
+
+      const pdfBlob = doc.output('blob');
+      const fileName = `avion-invoice-${date.getFullYear()}${date.getMonth()+1}${date.getDate()}.pdf`;
+
+      // Build order summary for WhatsApp
+      const lines = ['📋 *NEW ORDER FROM WEBSITE* 📋', ''];
+      lines.push('*Items:*');
+      cartItems.forEach((item) => {
+        lines.push(`• ${item.quantity}x ${item.product.name}`);
+        lines.push(`  ${formatPrice(item.product.price)} each = ${formatPrice(item.product.price * item.quantity)}`);
+      });
+      lines.push('');
+      lines.push(`*Grand Total: ${formatPrice(total)}*`);
+      lines.push('');
+      lines.push('Invoice PDF attached. Please prepare this order.');
+
+      const message = lines.join('\n');
+      // Send to Mr. Anthony (Merryland)
+      const phone = '256777408026';
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    } catch (err) {
+      console.error('Error sending WhatsApp', err);
+      alert('Could not send WhatsApp message.');
+    } finally {
+      setIsGenerating(false);
+    }
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -172,13 +308,34 @@ export default function CartPage() {
 
         {/* Summary */}
         <div className="bg-white rounded-xl shadow-lg p-8 sticky bottom-0">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-3xl font-bold text-gray-900">Order Summary</h2>
-            <div className="text-right">
-              <div className="text-gray-600 text-sm">Total Items</div>
-              <div className="text-xl font-bold text-primary">
-                {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
+          <div className="mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">📋 Order Summary</h2>
+            
+            {/* Items List in Summary */}
+            <div className="bg-gray-50 rounded-lg p-4 mb-6 max-h-64 overflow-y-auto">
+              <div className="space-y-3">
+                {cartItems.map((item) => (
+                  <div key={item.product.id} className="flex justify-between items-start py-2 border-b border-gray-200 last:border-0">
+                    <div className="flex-grow">
+                      <div className="font-semibold text-gray-800">{item.product.name}</div>
+                      <div className="text-sm text-gray-600">
+                        {item.quantity} x {formatPrice(item.product.price)}
+                      </div>
+                    </div>
+                    <div className="text-right font-bold text-primary">
+                      {formatPrice(item.product.price * item.quantity)}
+                    </div>
+                  </div>
+                ))}
               </div>
+            </div>
+
+            {/* Totals */}
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-gray-600">Total Items:</span>
+              <span className="font-bold text-lg text-gray-900">
+                {cartItems.reduce((sum, item) => sum + item.quantity, 0)} items
+              </span>
             </div>
           </div>
 
@@ -188,8 +345,8 @@ export default function CartPage() {
               <span>{formatPrice(total)}</span>
             </div>
             <div className="flex justify-between text-sm text-gray-600">
-              <span>Shipping:</span>
-              <span>Calculated at checkout</span>
+              <span>Delivery:</span>
+              <span>Arranged directly</span>
             </div>
           </div>
 
@@ -207,18 +364,33 @@ export default function CartPage() {
             >
               Continue Shopping
             </Link>
-            <button className="flex-1 bg-secondary hover:bg-secondary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-              Proceed to Checkout
+            <button
+              onClick={handleSendWhatsApp}
+              disabled={isGenerating}
+              className="flex-1 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              {isGenerating ? '⏳ Sending...' : '📲 Send Order to WhatsApp'}
+            </button>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <button
+              onClick={handleDownloadPdf}
+              disabled={isGenerating}
+              className="flex-1 bg-white border border-gray-200 hover:bg-gray-50 text-gray-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
+              {isGenerating ? '⏳ Generating PDF...' : '📄 Download Invoice (PDF)'}
             </button>
           </div>
 
           <p className="text-center text-sm text-gray-600 mt-4">
-            📞 Need help? Call us at 0745 280 289 or 0777 408 026
+            📞 <strong>Order Manager:</strong> Mr. Anthony (Merryland) | +256 777 408026
           </p>
         </div>
       </div>
     </div>
   );
 }
+
 
 

@@ -52,8 +52,12 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="flex items-center justify-center w-12 h-12 bg-primary rounded-lg group-hover:bg-accent-blue transition-colors duration-300">
-              <span className="text-2xl">🛒</span>
+            <div className="flex items-center justify-center w-12 h-12 bg-white rounded-lg group-hover:shadow-lg transition-all duration-300 overflow-hidden">
+              <img 
+                src="/logo.png" 
+                alt="Avion School Supplies Logo" 
+                className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             <div>
               <div className="text-xl font-bold text-primary group-hover:text-accent-blue transition-colors">
@@ -155,5 +159,6 @@ export default function Navigation() {
     </nav>
   );
 }
+
 
 

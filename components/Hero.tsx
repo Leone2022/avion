@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-accent-blue to-secondary">
+    <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-primary">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
           backgroundSize: '40px 40px'
@@ -28,7 +28,11 @@ export default function Hero() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 inline-block">
-              <span className="text-6xl md:text-8xl">🛒</span>
+              <img 
+                src="/logo.png" 
+                alt="Avion School Supplies Logo" 
+                className="w-32 h-32 md:w-40 md:h-40 object-contain"
+              />
             </div>
           </motion.div>
 
@@ -101,5 +105,6 @@ export default function Hero() {
     </section>
   );
 }
+
 
 

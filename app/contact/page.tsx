@@ -1,5 +1,17 @@
+import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Contact Avion School Supplies Ltd in Kampala, Uganda. Phone: 0745 280 289, 0777 408 026. Email: info@avionschoolsupplies.com',
+  keywords: 'Avion contact, school supplies Uganda contact, Kampala school supplies, Avion phone number',
+  openGraph: {
+    title: 'Contact Avion School Supplies Ltd',
+    description: 'Get in touch with us for quality school supplies in Uganda.',
+    url: '/contact',
+  },
+};
 
 export default function ContactPage() {
   return (

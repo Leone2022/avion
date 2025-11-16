@@ -1,4 +1,16 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Avion School Supplies Ltd - Founded in 2015, we provide quality school supplies across Uganda. Led by Mr. Anthony Makhoha, serving Kampala and beyond.',
+  keywords: 'Avion School Supplies, about Avion, Uganda school supplies, Kampala education, Anthony Makhoha',
+  openGraph: {
+    title: 'About Avion School Supplies Ltd',
+    description: 'Founded in 2015, providing quality school supplies across Uganda.',
+    url: '/about',
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -150,5 +162,6 @@ export default function AboutPage() {
     </div>
   );
 }
+
 
 
