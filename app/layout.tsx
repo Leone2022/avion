@@ -14,10 +14,17 @@ export const metadata: Metadata = {
     default: 'Avion School Supplies Ltd - Smart Shopping for Smart Minds',
     template: '%s | Avion School Supplies'
   },
-  description: 'Avion School Supplies - Your trusted source for quality school supplies in Uganda. Shop books, notebooks, writing instruments, geometry tools, art supplies, and more. Fast delivery across Kampala and Uganda.',
+  description: 'Avion School Supplies - Your trusted source for quality school supplies in Uganda. Avion offers books, notebooks, writing instruments, geometry tools, art supplies, and more. Fast delivery across Kampala and Uganda. Shop Avion today!',
   keywords: [
     'Avion',
     'Avion School Supplies',
+    'Avion Uganda',
+    'Avion Kampala',
+    'Avion School Supplies Uganda',
+    'Avion School Supplies Kampala',
+    'Avion books',
+    'Avion notebooks',
+    'Avion stationery',
     'school supplies Uganda',
     'school supplies Kampala',
     'notebooks Uganda',
@@ -32,8 +39,9 @@ export const metadata: Metadata = {
     'Casio calculators',
     'school stationery Uganda',
     'educational supplies Kampala',
-    'Avion Uganda',
-    'Avion Kampala'
+    'buy school supplies Uganda',
+    'Avion online store',
+    'Avion e-commerce'
   ],
   authors: [{ name: 'Avion School Supplies Ltd' }],
   creator: 'Avion School Supplies Ltd',
@@ -48,8 +56,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteUrl,
     siteName: 'Avion School Supplies Ltd',
-    title: 'Avion School Supplies Ltd - Smart Shopping for Smart Minds',
-    description: 'Quality school supplies in Uganda. Books, notebooks, writing instruments, geometry tools, art supplies, and more! Fast delivery across Kampala.',
+    title: 'Avion School Supplies Ltd - Smart Shopping for Smart Minds | Avion Uganda',
+    description: 'Avion School Supplies - Quality school supplies in Uganda. Avion offers books, notebooks, writing instruments, geometry tools, art supplies, and more! Fast delivery across Kampala. Shop Avion today!',
     images: [
       {
         url: '/logo.png',
@@ -61,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Avion School Supplies Ltd - Smart Shopping for Smart Minds',
-    description: 'Quality school supplies in Uganda. Books, notebooks, writing instruments, geometry tools, art supplies, and more!',
+    title: 'Avion School Supplies Ltd - Smart Shopping for Smart Minds | Avion Uganda',
+    description: 'Avion School Supplies - Quality school supplies in Uganda. Avion offers books, notebooks, writing instruments, geometry tools, art supplies, and more! Shop Avion today!',
     images: ['/logo.png'],
     creator: '@avionschoolsupplies',
   },
@@ -105,10 +113,23 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Store',
     name: 'Avion School Supplies Ltd',
-    description: 'Quality school supplies in Uganda. Books, notebooks, writing instruments, geometry tools, art supplies, and more!',
+    alternateName: 'Avion',
+    description: 'Avion School Supplies - Quality school supplies in Uganda. Avion offers books, notebooks, writing instruments, geometry tools, art supplies, and more! Shop Avion for all your educational needs.',
+    brand: {
+      '@type': 'Brand',
+      name: 'Avion',
+      logo: `${siteUrl}/logo.png`
+    },
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     image: `${siteUrl}/logo.png`,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '150',
+      bestRating: '5',
+      worstRating: '1'
+    },
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Kampala',

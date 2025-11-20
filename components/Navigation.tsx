@@ -61,7 +61,7 @@ export default function Navigation() {
             </div>
             <div>
               <div className="text-xl font-bold text-primary group-hover:text-accent-blue transition-colors">
-                Avion
+                <span className="sr-only">Avion School Supplies Ltd - </span>Avion
               </div>
               <div className="text-xs text-secondary">School Supplies Ltd</div>
             </div>

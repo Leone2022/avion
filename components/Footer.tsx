@@ -33,7 +33,9 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <div className="text-xl font-bold">Avion</div>
+                <div className="text-xl font-bold">
+                  <span className="sr-only">Avion School Supplies Ltd - </span>Avion
+                </div>
                 <div className="text-sm text-white/80">School Supplies Ltd</div>
               </div>
             </Link>

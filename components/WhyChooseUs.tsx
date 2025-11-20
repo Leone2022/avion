@@ -41,10 +41,10 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why Choose Avion?
+            Why Choose Avion School Supplies?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We're committed to providing the best school supplies experience in Uganda
+            Avion is committed to providing the best school supplies experience in Uganda. Shop Avion for quality, affordability, and excellent service.
           </p>
         </div>
 

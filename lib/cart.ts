@@ -10,7 +10,8 @@ const CART_STORAGE_KEY = 'avion-cart';
 export const getCart = (): CartItem[] => {
   if (typeof window === 'undefined') return [];
   
-  const cartData = localStorage.getItem(CART_STORAGE_KEY);
+  // Use sessionStorage instead of localStorage so cart is empty in new browser sessions
+  const cartData = sessionStorage.getItem(CART_STORAGE_KEY);
   if (!cartData) return [];
   
   try {
@@ -25,7 +26,8 @@ export const saveCart = (cart: CartItem[]) => {
   if (typeof window === 'undefined') return;
   
   try {
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    // Use sessionStorage instead of localStorage so cart is empty in new browser sessions
+    sessionStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
   } catch (error) {
     console.error('Error saving cart data:', error);
   }
@@ -70,7 +72,7 @@ export const updateCartQuantity = (productId: string, quantity: number) => {
 
 export const clearCart = () => {
   if (typeof window === 'undefined') return;
-  localStorage.removeItem(CART_STORAGE_KEY);
+  sessionStorage.removeItem(CART_STORAGE_KEY);
 };
 
 export const getCartTotal = (): number => {

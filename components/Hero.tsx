@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden bg-primary">
+    <section className="relative min-h-[600px] flex items-center justify-center bg-primary pb-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -15,7 +15,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8 md:pt-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,6 +41,7 @@ export default function Hero() {
             <span className="text-accent-yellow">Avion</span>{' '}
             <span>School Supplies</span>
           </h1>
+          <h2 className="sr-only">Avion - Your Trusted School Supplies Store in Uganda</h2>
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-light">
@@ -72,22 +73,22 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto px-4">
             {[
-              { emoji: '📦', number: '36+', label: 'Products' },
-              { emoji: '🎓', number: '6', label: 'Categories' },
+              { emoji: '📦', number: '64+', label: 'Products' },
+              { emoji: '🎓', number: '8', label: 'Categories' },
               { emoji: '⭐', number: '10+', label: 'Years' },
               { emoji: '😊', number: '1000+', label: 'Happy Customers' },
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                className="bg-white/10 backdrop-blur-md rounded-xl p-4"
+                className="bg-white/10 backdrop-blur-md rounded-xl p-4 md:p-6 mx-auto w-full"
                 whileHover={{ scale: 1.1, y: -5 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="text-3xl mb-2">{stat.emoji}</div>
-                <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-                <div className="text-white/80 text-sm">{stat.label}</div>
+                <div className="text-3xl mb-2 text-center">{stat.emoji}</div>
+                <div className="text-2xl font-bold text-white mb-1 text-center">{stat.number}</div>
+                <div className="text-white/80 text-sm text-center">{stat.label}</div>
               </motion.div>
             ))}
           </div>
