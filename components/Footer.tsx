@@ -40,7 +40,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/80 text-sm mb-4">
-              Smart Shopping for Smart Minds
+              Smart, Affordable and Stress-Free School Shopping
             </p>
             <p className="text-white/70 text-xs">
               Providing quality school supplies for Uganda since 2015
@@ -88,22 +88,33 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <span>📞</span>
                 <div>
-                  <a href="tel:0745280289" className="hover:text-white transition-colors">
-                    0745 280 289
+                  <a href="tel:+256745280279" className="hover:text-white transition-colors">
+                    0745 280 279 (WhatsApp)
                   </a>
                   <br />
-                  <a href="tel:0777408026" className="hover:text-white transition-colors">
-                    0777 408 026
+                  <a href="tel:+256777408026" className="hover:text-white transition-colors">
+                    0777 408 026 (Call)
                   </a>
                 </div>
               </li>
               <li className="flex items-start space-x-2">
                 <span>✉️</span>
                 <a
-                  href="mailto:info@avionschoolsupplies.com"
+                  href="mailto:antonymakokha75@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  info@avionschoolsupplies.com
+                  antonymakokha75@gmail.com
+                </a>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span>📱</span>
+                <a
+                  href="https://t.me/avionschoolsupplies"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  t.me/avionschoolsupplies
                 </a>
               </li>
               <li className="flex items-start space-x-2">
@@ -135,7 +146,7 @@ export default function Footer() {
           </div>
           <div className="mt-4 text-center">
             <p className="text-white/60 text-xs">
-              Owner: Mr. Anthony Makhoha | Building Uganda's Education Future
+              Owner: Mr. Antony Makokha | Building Uganda's Education Future
             </p>
           </div>
         </div>

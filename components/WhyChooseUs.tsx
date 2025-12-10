@@ -4,34 +4,34 @@ import { motion } from 'framer-motion';
 
 const benefits = [
   {
-    emoji: '📚',
-    title: 'Quality Products',
-    description: 'We stock only the highest quality supplies from trusted manufacturers',
+    emoji: '✅',
+    title: 'Wide Range of Products',
+    description: 'From books to uniforms, we\'ve got it all.',
   },
   {
-    emoji: '💰',
-    title: 'Affordable Prices',
-    description: 'Competitive pricing in Ugandan Shillings to fit every budget',
+    emoji: '✅',
+    title: 'Affordable & Stress-Free',
+    description: 'Smart shopping for students and parents alike.',
   },
   {
-    emoji: '🚚',
-    title: 'Fast Delivery',
-    description: 'Quick and reliable delivery service across Kampala and beyond',
+    emoji: '✅',
+    title: 'Convenient Online Access',
+    description: 'Browse, order, and pay effortlessly.',
   },
   {
-    emoji: '🎓',
-    title: 'Education Focus',
-    description: 'Specialized in school supplies - we understand your needs',
+    emoji: '✅',
+    title: 'Quality You Can Trust',
+    description: 'Durable products for long-lasting use.',
   },
   {
-    emoji: '⭐',
-    title: 'Trusted Service',
-    description: '10+ years of experience serving Uganda\'s educational community',
+    emoji: '📞',
+    title: 'Excellent Customer Service',
+    description: 'Dedicated support team always ready to help.',
   },
   {
-    emoji: '😊',
-    title: 'Customer Care',
-    description: 'Dedicated support from our friendly team led by Mr. Makhoha',
+    emoji: '🏆',
+    title: 'Competitive Prices',
+    description: 'Best value for your money with quality guaranteed.',
   },
 ];
 
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
             Why Choose Avion School Supplies?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Avion is committed to providing the best school supplies experience in Uganda. Shop Avion for quality, affordability, and excellent service.
+            At Avion School Supplies, we pride ourselves on excellent customer service and competitive prices. We offer everything from scholastic to non-scholastic essentials for Uganda's future leaders.
           </p>
         </div>
 

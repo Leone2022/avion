@@ -11,10 +11,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://avionschoolsupplies
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Avion School Supplies Ltd - Smart Shopping for Smart Minds',
+    default: 'Avion School Supplies Ltd - Smart, Affordable and Stress-Free School Shopping',
     template: '%s | Avion School Supplies'
   },
-  description: 'Avion School Supplies - Your trusted source for quality school supplies in Uganda. Avion offers books, notebooks, writing instruments, geometry tools, art supplies, and more. Fast delivery across Kampala and Uganda. Shop Avion today!',
+  description: 'Avion School Supplies - Quality supplies for Uganda\'s future leaders. From scholastic to non-scholastic essentials, we have everything you need for your educational journey. Smart, affordable and stress-free school shopping.',
   keywords: [
     'Avion',
     'Avion School Supplies',

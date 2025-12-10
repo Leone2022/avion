@@ -45,13 +45,13 @@ export default function Hero() {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 font-light">
-            Smart Shopping for Smart Minds
+            Smart, Affordable and Stress-Free School Shopping
           </p>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto">
-            Quality supplies for Uganda's brightest students. From notebooks to art supplies,
-            we have everything your educational journey needs.
+            Quality supplies for Uganda's future leaders. From scholastic to non-scholastic essentials,
+            we have everything you need for your educational journey.
           </p>
 
           {/* CTA Buttons */}
