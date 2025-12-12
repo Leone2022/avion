@@ -406,7 +406,7 @@ export const products: Product[] = [
     name: 'Heavy Duty Stapling Machine HD 12-17',
     category: 'Office Supplies',
     emoji: '📎',
-    price: 15000,
+    price: 150000,
     description: 'Heavy duty stapling machine HD 12-17. Professional grade.',
     brand: 'Generic',
     unit: 'piece',
