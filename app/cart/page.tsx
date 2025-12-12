@@ -187,7 +187,7 @@ export default function CartPage() {
 
       const message = lines.join('\n');
       // Send to Mr. Anthony (Merryland)
-      const phone = '256777408026';
+      const phone = '256745280279';
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     } catch (err) {
