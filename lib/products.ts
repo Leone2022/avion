@@ -717,23 +717,11 @@ export const products: Product[] = [
   },
   {
     id: '056',
-    name: 'Box File',
-    category: 'Books & Notebooks',
-    emoji: '📁',
-    price: 7000,
-    description: 'Box file for organizing documents and papers.',
-    brand: 'Generic',
-    unit: 'piece',
-    stock: 35,
-    imageUrl: '/images/products/boxfile.jpeg',
-  },
-  {
-    id: '057',
     name: 'Boxers',
     category: 'Uniforms & Clothing',
     emoji: '🩲',
     price: 6000,
-    description: 'Men’s boxers. Comfortable and durable fabric.',
+    description: 'Mens boxers. Comfortable and durable fabric.',
     brand: 'Generic',
     unit: 'piece',
     stock: 50,
@@ -742,7 +730,7 @@ export const products: Product[] = [
 
   // ✏️ WRITING INSTRUMENTS (Additional Products)
   {
-    id: '058',
+    id: '057',
     name: 'Nataraj Pens (Pack of 10)',
     category: 'Writing Instruments',
     emoji: '🖊️',
@@ -755,7 +743,7 @@ export const products: Product[] = [
     imageUrl: '/images/products/Nataraj.jpeg',
   },
   {
-    id: '059',
+    id: '058',
     name: 'Nataraj Pencils (Pack of 10)',
     category: 'Writing Instruments',
     emoji: '✏️',
@@ -769,7 +757,7 @@ export const products: Product[] = [
 
   // 🔢 MATHEMATICAL SETS & CALCULATORS (Additional Products)
   {
-    id: '060',
+    id: '059',
     name: 'Casio Calculator',
     category: 'Math Sets & Calculators',
     emoji: '🔢',
@@ -784,7 +772,7 @@ export const products: Product[] = [
 
   // 📋 OFFICE SUPPLIES (Additional Products)
   {
-    id: '061',
+    id: '060',
     name: 'Rotatrim',
     category: 'Office Supplies',
     emoji: '✂️',
@@ -796,7 +784,7 @@ export const products: Product[] = [
     imageUrl: '/images/products/rotatrim.jpeg',
   },
   {
-    id: '062',
+    id: '061',
     name: 'Water Flask',
     category: 'Office Supplies',
     emoji: '🍼',
@@ -808,7 +796,7 @@ export const products: Product[] = [
     imageUrl: '/images/products/flask.jpeg',
   },
   {
-    id: '063',
+    id: '062',
     name: 'Pegs on a hunger',
     category: 'Office Supplies',
     emoji: '📎',
@@ -822,7 +810,7 @@ export const products: Product[] = [
 
   // 👔 UNIFORMS & CLOTHING (Additional Products)
   {
-    id: '064',
+    id: '063',
     name: 'Vests 3 in 1',
     category: 'Uniforms & Clothing',
     emoji: '👕',
