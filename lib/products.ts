@@ -48,7 +48,7 @@ export const products: Product[] = [
     brand: 'Champion',
     unit: 'piece',
     stock: 45,
-    imageUrl: '/images/products/champion.jpeg',
+    imageUrl: '/images/products/Picfare Counter Book (96 pages).jpeg',
   },
   {
     id: '003',
@@ -85,7 +85,7 @@ export const products: Product[] = [
     brand: 'Generic',
     unit: 'piece',
     stock: 35,
-    imageUrl: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&h=500&fit=crop',
+    imageUrl: '/images/products/Picfare Simply the Best (384 pages).jpeg',
   },
   {
     id: '006',
@@ -208,7 +208,7 @@ export const products: Product[] = [
     brand: 'Generic',
     unit: 'piece',
     stock: 50,
-    imageUrl: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=500&fit=crop',
+    imageUrl: '/images/products/graph.jpeg',
   },
   {
     id: '016',
@@ -232,7 +232,7 @@ export const products: Product[] = [
     brand: 'Generic',
     unit: 'piece',
     stock: 18,
-    imageUrl: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&h=500&fit=crop',
+    imageUrl: '/images/products/NOTEBOOK.jpeg',
   },
 
   // ✏️ WRITING INSTRUMENTS (4 Products)
@@ -712,8 +712,8 @@ export const products: Product[] = [
     description: 'Goodnews Bible with quality printing and binding.',
     brand: 'Goodnews',
     unit: 'piece',
-    stock: 28,
-    imageUrl: '/images/products/goodnewsbible.jpeg',
+    stock: 8,
+    imageUrl: '/images/products/goodnews.jpeg',
   },
   {
     id: '056',
