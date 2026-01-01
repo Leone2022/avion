@@ -627,7 +627,7 @@ export const products: Product[] = [
     brand: 'Euro Silk',
     unit: 'pack',
     stock: 40,
-    imageUrl: '/images/products/euro silk toilet paper.jpeg',
+    imageUrl: '/images/products/euro.jpeg',
   },
 
   // 📚 BOOKS & NOTEBOOKS (Additional Products)
