@@ -465,11 +465,11 @@ export const products: Product[] = [
   },
   {
     id: '035a',
-    name: 'Metallic School Box (All Sizes)',
+    name: 'Metallic School Box (250,000 - 900,000)',
     category: 'Storage & Organization',
     emoji: '🗃️',
     price: 250000,
-    description: 'Metallic school box for secure storage. Available in all sizes. Prices range from 250,000 to 900,000 UGX depending on size.',
+    description: 'Metallic school box for secure storage. All sizes available from 250,000 to 900,000 UGX.',
     featured: true,
     brand: 'Generic',
     unit: 'piece',
@@ -501,7 +501,7 @@ export const products: Product[] = [
     brand: 'Generic',
     unit: 'piece',
     stock: 60,
-    imageUrl: '/images/products/Girls Socks.jpeg',
+    imageUrl: '/images/products/GirlsSocks.jpeg',
   },
   {
     id: '038',
