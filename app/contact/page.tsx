@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
 import Link from 'next/link';
+import AirtelPayment from '@/components/AirtelPayment';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -157,6 +158,11 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Airtel Money Payment */}
+              <div>
+                <AirtelPayment variant="compact" />
               </div>
             </div>
           </div>

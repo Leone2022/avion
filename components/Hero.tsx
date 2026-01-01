@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import AirtelPayment from './AirtelPayment';
 
 export default function Hero() {
   return (
@@ -71,6 +72,16 @@ export default function Hero() {
               <span>Learn More</span>
             </Link>
           </div>
+
+          {/* Airtel Payment Button */}
+          <motion.div
+            className="mt-12 inline-block"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            <AirtelPayment variant="hero" />
+          </motion.div>
 
           {/* Stats */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-3xl mx-auto px-4">

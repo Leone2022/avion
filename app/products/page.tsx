@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { products, categories, searchProducts } from '@/lib/products';
 import ProductGrid from '@/components/ProductGrid';
+import AirtelPayment from '@/components/AirtelPayment';
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -33,6 +34,11 @@ export default function ProductsPage() {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Browse our complete catalog of quality school supplies
           </p>
+          
+          {/* Airtel Payment Button */}
+          <div className="mt-6 inline-block">
+            <AirtelPayment variant="products" />
+          </div>
         </div>
 
         {/* Search Bar */}

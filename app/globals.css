@@ -57,4 +57,33 @@ body {
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
+/* Airtel Logo Flash Animation */
+@keyframes airtelFlash {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes airtelPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(237, 28, 36, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(237, 28, 36, 0);
+  }
+}
+
+.airtel-flash {
+  animation: airtelFlash 2s ease-in-out infinite, airtelPulse 2s ease-in-out infinite;
+}
+
+.airtel-badge {
+  animation: airtelPulse 2s ease-in-out infinite;
+}
+
 

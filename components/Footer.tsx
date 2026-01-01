@@ -129,6 +129,20 @@ export default function Footer() {
                   <div>Sun: Closed</div>
                 </div>
               </li>
+              <li className="flex items-start space-x-2">
+                <div className="bg-white rounded p-1">
+                  <img 
+                    src="/Airtel_logo-01.png" 
+                    alt="Airtel Money" 
+                    className="w-8 h-8 object-contain airtel-flash"
+                  />
+                </div>
+                <div>
+                  <div className="font-semibold mb-1">Airtel Money</div>
+                  <div className="text-xs">Dial: *185*9#</div>
+                  <div className="text-xs">Merchant: 6962718</div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
