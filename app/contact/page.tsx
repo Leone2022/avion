@@ -5,7 +5,7 @@ import AirtelPayment from '@/components/AirtelPayment';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Contact Avion School Supplies Ltd in Kampala, Uganda. Phone: 0745 280 289, 0777 408 026. Email: info@avionschoolsupplies.com',
+  description: 'Contact Avion School Supplies Ltd in Kampala, Uganda. Phone: 0745 280 289, 0777 408 026. Email: avionschoolsupplies@gmail.com',
   keywords: 'Avion contact, school supplies Uganda contact, Kampala school supplies, Avion phone number',
   openGraph: {
     title: 'Contact Avion School Supplies Ltd',
@@ -119,10 +119,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
                     <a
-                      href="mailto:info@avionschoolsupplies.com"
+                      href="mailto:avionschoolsupplies@gmail.com"
                       className="text-lg text-gray-600 hover:text-primary transition-colors"
                     >
-                      info@avionschoolsupplies.com
+                      avionschoolsupplies@gmail.com
                     </a>
                   </div>
                 </div>
