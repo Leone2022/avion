@@ -100,10 +100,10 @@ export default function Footer() {
               <li className="flex items-start space-x-2">
                 <span>✉️</span>
                 <a
-                  href="mailto:antonymakokha75@gmail.com"
+                  href="mailto:avionschoolsupplies@gmail.com"
                   className="hover:text-white transition-colors"
                 >
-                  antonymakokha75@gmail.com
+                  avionschoolsupplies@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-2">
