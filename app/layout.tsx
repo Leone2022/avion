@@ -139,7 +139,7 @@ export default function RootLayout({
       '@type': 'ContactPoint',
       telephone: '+256-777-408-026',
       contactType: 'Customer Service',
-      email: 'info@avionschoolsupplies.com',
+      email: 'avionschoolsupplies@gmail.com',
       areaServed: 'UG',
       availableLanguage: 'en',
     },

@@ -123,7 +123,7 @@ Colors extracted from your logo:
 ## 📞 Contact Information
 
 - **Phones**: 0745 280 289 / 0777 408 026
-- **Email**: info@avionschoolsupplies.com
+- **Email**: avionschoolsupplies@gmail.com
 - **Location**: Kampala, Uganda
 - **Owner**: Mr. Anthony Makhoha
 
