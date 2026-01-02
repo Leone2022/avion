@@ -48,7 +48,7 @@ export const products: Product[] = [
     brand: 'Champion',
     unit: 'piece',
     stock: 45,
-    imageUrl: '/images/products/Champion Exercise Book (96 pages).jpeg',
+    imageUrl: '/images/products/Champion.jpeg',
   },
   {
     id: '003',
