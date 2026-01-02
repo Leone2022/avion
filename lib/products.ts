@@ -48,7 +48,7 @@ export const products: Product[] = [
     brand: 'Champion',
     unit: 'piece',
     stock: 45,
-    imageUrl: '/images/products/product-001-champion-exercise-book-200.jpg',
+    imageUrl: '/images/products/Champion Exercise Book (96 pages).jpeg',
   },
   {
     id: '003',
@@ -61,7 +61,7 @@ export const products: Product[] = [
     brand: 'Picfare',
     unit: 'dozen',
     stock: 60,
-    imageUrl: '/images/products/Champion Exercise Book (96 pages).jpeg',
+    imageUrl: '/images/products/product-003-picfare-exercise-book-96.jpg',
   },
   {
     id: '004',
