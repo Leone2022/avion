@@ -66,7 +66,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-          placeholder="John Doe"
+          placeholder="Your full name"
         />
       </div>
 
@@ -82,7 +82,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-          placeholder="john@example.com"
+          placeholder="your.email@example.com"
         />
       </div>
 
